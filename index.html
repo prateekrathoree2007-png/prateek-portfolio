@@ -3,224 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Prateek Kumar - Web Developer Portfolio">
-  <title>Prateek Kumar | Web Developer</title>
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="Prateek Kumar — aspiring frontend developer building responsive websites with HTML, CSS and JavaScript.">
+  <title>Prateek Kumar | Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <div class="progress-bar" id="progressBar"></div>
-  <div class="background-glow glow-one"></div>
-  <div class="background-glow glow-two"></div>
-
-  <header class="header">
-    <nav class="navbar container">
-      <a href="#home" class="logo">PK<span>.</span></a>
-
-      <button class="menu-toggle" id="menuToggle"
-        aria-label="Toggle navigation"
-        aria-expanded="false">☰</button>
-
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Prateek Kumar home">PK<span>.</span></a>
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <button id="themeToggle" class="theme-btn"
-          aria-label="Toggle theme">☀</button>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Toggle theme">☀</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
 
   <main>
-
-    <!-- HOME -->
-    <section id="home" class="hero container">
+    <section class="hero section container" id="home">
       <div class="hero-content reveal">
-        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-
-        <h1>Hi, I'm <span>Prateek Kumar</span></h1>
-
-        <h2>I'm a <span id="typingText"></span><span class="cursor">|</span></h2>
-
-        <p class="hero-description">
-          I am an aspiring web developer passionate about
-          creating modern, responsive and interactive
-          websites using HTML, CSS and JavaScript.
-        </p>
-
+        <div class="eyebrow"><span class="status-dot"></span> OPEN TO LEARNING & COLLABORATION</div>
+        <p class="hero-kicker">HELLO, I'M</p>
+        <h1>PRATEEK <span>KUMAR.</span></h1>
+        <h2>I build <span class="typed" id="typedText">modern websites</span><span class="cursor" aria-hidden="true">|</span></h2>
+        <p class="hero-description">Aspiring frontend developer and Online BCA student. I turn ideas into clean, responsive web experiences using HTML, CSS and JavaScript.</p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn primary-btn">
-            Explore Projects
-          </a>
-          <a href="#contact" class="btn secondary-btn">
-            Contact Me
-          </a>
+          <a class="btn btn-primary" href="#projects">Explore My Work <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="#contact">Let's Connect <span aria-hidden="true">→</span></a>
         </div>
+        <div class="hero-meta"><span><strong>HTML</strong> / CSS / JS</span><span>Frontend Development</span><span>Based in India</span></div>
       </div>
-
       <div class="hero-art reveal" aria-hidden="true">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="core-sphere"></div>
-        <div class="floating-cube cube-one"></div>
-        <div class="floating-cube cube-two"></div>
-        <div class="sphere-label">WEB DEV</div>
+        <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+        <div class="art-card"><span class="art-label">&lt;developer /&gt;</span><strong>PK<span>.</span></strong><small>CRAFTING THE WEB</small></div>
+        <div class="art-chip chip-top">✦ CREATIVE CODING</div><div class="art-chip chip-bottom">{ DESIGN + CODE }</div>
+      </div>
+      <a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading reveal"><p class="section-label">01 / WHO I AM</p><h2>About <span>Me.</span></h2></div>
+      <div class="about-grid">
+        <div class="about-copy reveal"><p>I'm <strong>Prateek Kumar</strong>, a passionate learner exploring frontend development. I enjoy turning simple concepts into websites that look great and feel intuitive.</p><p>I'm currently pursuing an <strong>Online Bachelor of Computer Applications (BCA)</strong> at Jamia Hamdard University while strengthening my skills through practical projects.</p><a class="text-link" href="#contact">Have an idea? Let's talk ↗</a></div>
+        <div class="about-stats reveal"><div class="stat"><strong>03</strong><span>Core web technologies</span></div><div class="stat"><strong>2024</strong><span>BCA admission year</span></div><div class="stat"><strong>∞</strong><span>Curiosity to learn</span></div></div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">GET TO KNOW ME</p>
-        <h2>About <span>Me</span></h2>
+    <section class="section section-panel" id="skills"><div class="container">
+      <div class="section-heading reveal"><p class="section-label">02 / MY TOOLKIT</p><h2>Skills & <span>Tools.</span></h2><p>Technologies I use and continue to practice.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><span class="skill-icon">&lt;/&gt;</span><h3>HTML5</h3><p>Semantic and accessible page structure.</p><span class="skill-tag">STRUCTURE</span></article>
+        <article class="skill-card reveal"><span class="skill-icon">#</span><h3>CSS3</h3><p>Responsive layouts, transitions and visual design.</p><span class="skill-tag">STYLING</span></article>
+        <article class="skill-card reveal"><span class="skill-icon">JS</span><h3>JavaScript</h3><p>Interactive interfaces and DOM manipulation.</p><span class="skill-tag">INTERACTIVITY</span></article>
+        <article class="skill-card reveal"><span class="skill-icon">⑂</span><h3>Git & GitHub</h3><p>Version control and publishing projects online.</p><span class="skill-tag">WORKFLOW</span></article>
       </div>
+    </div></section>
 
-      <div class="glass-card about-card reveal">
-        <h3>Building the Web, One Step at a Time</h3>
-        <p>
-          I'm Prateek Kumar, a BCA student at Jamia Hamdard
-          University and an aspiring Web Developer.
-          I'm developing my skills in HTML, CSS and
-          JavaScript, with an interest in creative
-          website design, animations and user experiences.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">MY TOOLKIT</p>
-        <h2>My <span>Skills</span></h2>
-      </div>
-
-      <div class="card-grid">
-        <article class="glass-card tilt-card reveal">
-          <div class="skill-icon">H</div>
-          <h3>HTML5</h3>
-          <p>Semantic page structure and web content.</p>
-        </article>
-
-        <article class="glass-card tilt-card reveal">
-          <div class="skill-icon">C</div>
-          <h3>CSS3</h3>
-          <p>Responsive layouts, styling and animations.</p>
-        </article>
-
-        <article class="glass-card tilt-card reveal">
-          <div class="skill-icon">JS</div>
-          <h3>JavaScript</h3>
-          <p>Interactive elements and web functionality.</p>
-        </article>
+    <section class="section container" id="projects">
+      <div class="section-heading reveal"><p class="section-label">03 / SELECTED WORK</p><h2>Featured <span>Projects.</span></h2><p>Projects and experiments from my web development journey.</p></div>
+      <div class="projects-grid">
+        <article class="project-card reveal"><div class="project-visual visual-portfolio"><span>01 / PORTFOLIO</span><strong>PK.</strong></div><div class="project-info"><div class="project-topline"><span>PERSONAL PROJECT</span><span>2026</span></div><h3>Developer Portfolio</h3><p>This responsive portfolio featuring cinematic styling and interactive UI.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/prateekrathoree2007-png/prateek-portfolio" target="_blank" rel="noopener noreferrer">View Source ↗</a></div></article>
+        <article class="project-card reveal"><div class="project-visual visual-next"><span>02 / NEXT BUILD</span><strong>COMING<br>SOON<span>.</span></strong></div><div class="project-info"><div class="project-topline"><span>FUTURE PROJECT</span><span>PLANNED</span></div><h3>Next Web Experience</h3><p>More real projects will be added here as I build and publish them.</p><div class="tags"><span>Design</span><span>Development</span></div><span class="project-link muted">In progress</span></div></article>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">MY LEARNING JOURNEY</p>
-        <h2>My <span>Education</span></h2>
-      </div>
+    <section class="section section-panel" id="education"><div class="container">
+      <div class="section-heading reveal"><p class="section-label">04 / MY JOURNEY</p><h2>Education & <span>Growth.</span></h2></div>
+      <div class="timeline reveal"><div class="timeline-dot"></div><div><span class="timeline-date">JULY 2024 — PRESENT</span><h3>Bachelor of Computer Applications (Online)</h3><p>Jamia Hamdard University</p><p>Studying computer applications while developing practical skills in frontend web development.</p></div></div>
+    </div></section>
 
-      <div class="glass-card education-card reveal">
-        <span class="date-label">2024 - Present</span>
-        <h3>Bachelor of Computer Applications (BCA)</h3>
-        <h4>Jamia Hamdard University</h4>
-        <p>Online BCA Program</p>
-      </div>
+    <section class="section container contact-section" id="contact">
+      <div class="section-heading reveal"><p class="section-label">05 / GET IN TOUCH</p><h2>Let's Build <span>Something.</span></h2><p>Interested in collaborating, sharing feedback or discussing a project? Reach out through GitHub.</p></div>
+      <div class="contact-actions reveal"><a class="btn btn-primary" href="https://github.com/prateekrathoree2007-png" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a><a class="btn btn-outline" href="https://github.com/prateekrathoree2007-png/prateek-portfolio" target="_blank" rel="noopener noreferrer">Portfolio Repository ↗</a></div>
     </section>
-
-    <!-- FUTURE PROJECTS -->
-    <section id="projects" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">WHAT I PLAN TO BUILD</p>
-        <h2>Future <span>Project Ideas</span></h2>
-        <p>Concepts I'm interested in building as I grow my skills.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="glass-card tilt-card reveal">
-          <div class="project-visual">🎮</div>
-          <span class="project-tag">Planned</span>
-          <h3>Anime Store</h3>
-          <p>An anime-themed online storefront concept.</p>
-        </article>
-
-        <article class="glass-card tilt-card reveal">
-          <div class="project-visual">⚡</div>
-          <span class="project-tag">Planned</span>
-          <h3>JavaScript Mini Games</h3>
-          <p>Fun browser-based interactive games.</p>
-        </article>
-
-        <article class="glass-card tilt-card reveal">
-          <div class="project-visual">🌐</div>
-          <span class="project-tag">Planned</span>
-          <h3>Landing Page</h3>
-          <p>A modern responsive promotional webpage.</p>
-        </article>
-
-        <article class="glass-card tilt-card reveal">
-          <div class="project-visual">💻</div>
-          <span class="project-tag">Planned</span>
-          <h3>Personal Portfolio</h3>
-          <p>A creative portfolio with interactive effects.</p>
-        </article>
-
-        <article class="glass-card tilt-card reveal">
-          <div class="project-visual">🕹️</div>
-          <span class="project-tag">Planned</span>
-          <h3>Web Game</h3>
-          <p>A playable browser game using JavaScript.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section container">
-      <div class="section-heading reveal">
-        <p class="eyebrow">LET'S CONNECT</p>
-        <h2>Contact <span>Me</span></h2>
-      </div>
-
-      <div class="glass-card contact-card reveal">
-        <p>Have a project idea or want to get in touch?</p>
-
-        <form id="contactForm">
-          <label for="name">Your Name</label>
-          <input id="name" name="name" type="text"
-            placeholder="Enter your name" required>
-
-          <label for="email">Your Email</label>
-          <input id="email" name="email" type="email"
-            placeholder="Enter your email" required>
-
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5"
-            placeholder="Write your message" required></textarea>
-
-          <button type="submit" class="btn primary-btn">
-            Send Message
-          </button>
-
-          <p id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-
-        <a class="email-link" href="mailto:rzone0026@gmail.com">
-          rzone0026@gmail.com
-        </a>
-      </div>
-    </section>
-
   </main>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> Prateek Kumar. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="#home">PK<span>.</span></a><p>© <span id="year"></span> Prateek Kumar. Built with HTML, CSS & JavaScript.</p><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>
